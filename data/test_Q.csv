@@ -1,0 +1,5 @@
+id,question,answer,answer_value,answer_unit,ref_id,ref_url,supporting_materials,explanation
+q001,What was the average increase in U.S. data center electricity consumption between 2010 and 2014?,,,percent,,,,
+q002,"In 2023, what was the estimated amount of cars that could be taken off the road equivalent to the amount of metric tons of CO2e the Amazon Solar Farm Maryland-CPV Backbone would avoid?",,,cars,,,,
+q004,How many data centers did AWS begin using recycled water for cooling in 2023?,,,data centers,,,,
+q005,"Since NVIDIA doesn't release the embodied carbon emissions of its hardware, what are the estimated embodied carbon emissions in kg per GPU?",,,kg/GPU,,,,

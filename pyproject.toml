@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wattbot-rag"
+version = "0.1.0"
+description = "WattBot 2025 RAG pipeline (HERO baseline to HERO improvements)"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "WattBot 2025 Team" }
+]
+license = { text = "MIT" }
+dependencies = [
+  "docling>=2.0.0",
+  "rank-bm25>=0.2.2",
+  "sentence-transformers>=3.0.0",
+  "faiss-cpu>=1.8.0",
+  "pandas>=2.0.0",
+  "numpy>=1.24.0",
+  "tqdm>=4.66.0",
+  "requests>=2.31.0",
+  "easyocr>=1.7.0",
+  "pillow>=10.0.0",
+  "opencv-python>=4.9.0.0",
+  "pdfminer.six>=20221105",
+  "google-generativeai>=0.7.0",
+  "typer[all]>=0.12.0",
+  "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff",
+  "mypy",
+]
+
+[project.scripts]
+wattbot-rag = "wattbot_rag.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

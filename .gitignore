@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.python-version
+
+# Environments
+.env
+.env.*
+venv/
+.venv/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.iml
+
+# Project outputs & large artifacts
+outputs/
+papers/
+notebooks/.ipynb_checkpoints/
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+
+# Reports / submissions
+submission*.csv
+
