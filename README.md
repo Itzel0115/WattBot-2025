@@ -330,9 +330,9 @@ Metrics:
 
 ---
 
-## LLM / Gemini (optional)
+## LLM / Gemini
 
-The original Colab notebook used multiple hard‑coded Gemini keys and rotated them. In this refactor:
+The notebook used multiple hard‑coded Gemini keys and rotated them. In this refactor:
 
 - We read a **single key** from the `GOOGLE_API_KEY` env var.
 - All LLM‑related logic is placed under `wattbot_rag/llm/` (currently as a minimal, extendable scaffold).
@@ -358,36 +358,4 @@ Suggested extension (if you want a full inference pipeline):
 
 ---
 
-## Minimal reproducible flow (for reviewers)
-
-If you are a GitHub reviewer and just want to see the pipeline run end‑to‑end, try:
-
-```bash
-git clone <this-repo>
-cd <this-repo>
-
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -e .
-
-# 1. Check that data/ contains the three CSVs (already included)
-ls data
-
-# 2. Download PDFs
-wattbot-rag download-pdfs
-
-# 3. Parse PDFs + OCR
-wattbot-rag build-chunks
-
-# 4. Build indexes
-wattbot-rag build-index
-
-# 5. Evaluate retrieval on train_QA
-wattbot-rag evaluate
-
-# 6. Run a few sample queries
-wattbot-rag query "What is the name of the benchmark suite for measuring inference energy consumption?" --unit is_blank
-```
-
-This flow runs entirely on a local (non‑Colab) environment. As long as dependencies and minimal system tools are installed, you can fully reproduce **download → chunks → index → evaluate** for the HERO RAG pipeline. With `GOOGLE_API_KEY` configured, you can further extend it with LLM answer generation.
 
